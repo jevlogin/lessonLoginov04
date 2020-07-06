@@ -1,0 +1,6 @@
+F:\Geekbrains\Lesson\Основы языка C#\LessonLoginov04\04les02\bin\Debug\04les02.exe.config
+F:\Geekbrains\Lesson\Основы языка C#\LessonLoginov04\04les02\bin\Debug\04les02.exe
+F:\Geekbrains\Lesson\Основы языка C#\LessonLoginov04\04les02\bin\Debug\04les02.pdb
+F:\Geekbrains\Lesson\Основы языка C#\LessonLoginov04\04les02\obj\Debug\04les02.csproj.CoreCompileInputs.cache
+F:\Geekbrains\Lesson\Основы языка C#\LessonLoginov04\04les02\obj\Debug\04les02.exe
+F:\Geekbrains\Lesson\Основы языка C#\LessonLoginov04\04les02\obj\Debug\04les02.pdb
