@@ -18,7 +18,7 @@ namespace _04les04
         int[] a;
         public MyArray(string filename)
         {
-            const string path = "..\\..\\data.txt";
+            const string path = "..\\..\\data2.txt";
             try
             {
                 using (StreamReader sr = new StreamReader(filename))
@@ -27,7 +27,6 @@ namespace _04les04
                     {
                         int N = int.Parse(sr.ReadLine());
                         a = new int[N];
-                        Console.WriteLine(a);
                         for (int i = 0; i < N; i++)
                         {
                             a[i] = int.Parse(sr.ReadLine());
@@ -95,11 +94,11 @@ namespace _04les04
         public void BubleSort()
         {
             // Сортируем методом пузырька
-            for (int i = 0; i < Length; i++)
+            for (int i = 0; i < a.Length; i++)
             {
-                for (int k = 0; i < Length - 1; i++)
+                for (int k = 0; i < a.Length - 1; i++)
                 {
-                    if (a[k] > a[k +1])
+                    if (a[k] > a[k + 1])
                     {
                         int t = a[k];
                         a[k] = a[k + 1];
@@ -112,7 +111,7 @@ namespace _04les04
         {
             foreach (var el in a)
             {
-                Console.WriteLine($"{a, 4}");
+                Console.WriteLine($"{el,4}");
             }
         }
         public void Print(string msg)
@@ -124,14 +123,16 @@ namespace _04les04
     {
         static void Main(string[] args)
         {
-            MyArray a = new MyArray("data.txt");
-            //a.Print();
+            MyArray a = new MyArray("data2.txt");
+            a.Print();
             Console.WriteLine($"\nMax: {a.Max}");
             Console.WriteLine($"Min: {a.Min}");
-            Console.WriteLine($"Middle: {a.Sum/a.Length}");
+            Console.WriteLine($"Middle: {a.Sum / a.Length}");
             a.BubleSort();
             a.Print("Отсортированный массив");
             Console.WriteLine();
+
+            a.Print();
 
             Console.ReadKey();
         }
