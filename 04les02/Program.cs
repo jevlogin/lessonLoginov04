@@ -7,6 +7,7 @@ namespace _04les02
     {
         static void Main(string[] args)
         {
+
             const string path = "..\\..\\data.txt";
             int summ = 0;
             int count = 0;

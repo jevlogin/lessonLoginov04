@@ -1,9 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /**
  * 
@@ -25,13 +21,17 @@ namespace _04les04
             const string path = "..\\..\\data.txt";
             try
             {
-                using (StreamReader sr = new StreamReader(path))
+                using (StreamReader sr = new StreamReader(filename))
                 {
-                    int N = int.Parse(sr.ReadLine());
-                    a = new int[N];
-                    for (int i = 0; i < N; i++)
+                    while (!sr.EndOfStream)
                     {
-                        a[i] = int.Parse(sr.ReadLine());
+                        int N = int.Parse(sr.ReadLine());
+                        a = new int[N];
+                        Console.WriteLine(a);
+                        for (int i = 0; i < N; i++)
+                        {
+                            a[i] = int.Parse(sr.ReadLine());
+                        }
                     }
                     sr.Close();
                 };
@@ -110,20 +110,30 @@ namespace _04les04
         }
         public void Print()
         {
-            foreach (var item in a)
+            foreach (var el in a)
             {
-                Console.WriteLine($"{item,4}");
+                Console.WriteLine($"{a, 4}");
             }
         }
         public void Print(string msg)
         {
-
+            Console.WriteLine(msg);
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
+            MyArray a = new MyArray("data.txt");
+            //a.Print();
+            Console.WriteLine($"\nMax: {a.Max}");
+            Console.WriteLine($"Min: {a.Min}");
+            Console.WriteLine($"Middle: {a.Sum/a.Length}");
+            a.BubleSort();
+            a.Print("Отсортированный массив");
+            Console.WriteLine();
+
+            Console.ReadKey();
         }
     }
 }
