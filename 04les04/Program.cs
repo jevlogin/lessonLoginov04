@@ -96,13 +96,13 @@ namespace _04les04
             // Сортируем методом пузырька
             for (int i = 0; i < a.Length; i++)
             {
-                for (int k = 0; i < a.Length - 1; i++)
+                for (int j = 0; j < a.Length - 1; j++)
                 {
-                    if (a[k] > a[k + 1])
+                    if (a[j] > a[j+1])
                     {
-                        int t = a[k];
-                        a[k] = a[k + 1];
-                        a[k + 1] = t;
+                        int t = a[j];
+                        a[j] = a[j + 1];
+                        a[j + 1] = t;
                     }
                 }
             }
