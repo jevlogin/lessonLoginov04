@@ -98,11 +98,46 @@ namespace _04les06
                 return count;
             }
         }
+        public double Average
+        {
+            get
+            {
+                double sum = 0;
+                for (int i = 0; i < a.GetLength(0); i++)
+                {
+                    for (int j = 0; j < a.GetLength(1); j++)
+                    {
+                        sum += a[i, j];
+                    }
+                }
+                return sum / a.GetLength(0) / a.GetLength(1);
+            }
+        }
+        public override string ToString()
+        {
+            string s = string.Empty;
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
+                {
+                    s += $"{a[i, j],4}";
+                }
+                s += "\n";
+            }
+            return s;
+        }
     }
     class Program
     {
         static void Main(string[] args)
         {
+            MyArrayTwoDim a = new MyArrayTwoDim(10, 0, 100);
+            Console.WriteLine(a.ToString());
+            Console.WriteLine($"Минимальный элемент: {a.Min}");
+            Console.WriteLine($"Максимальный элемент: {a.Max}");
+            Console.WriteLine($"Среднее значение элементов: {a.Average}");
+
+            Console.ReadKey();
         }
     }
 }
