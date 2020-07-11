@@ -14,7 +14,7 @@ namespace _04dz02
             int count = StaticClass.CountPairsDivisibleByThree(array.GetArray);
             Console.WriteLine($"Количество пар элементов массива,\nв которых только одно число делится на 3 равно: {count}");
 
-            var array2 = (int[])StaticClass.GetArray(filename);
+            var array2 = StaticClass.GetArray(filename);
 
             if (array2.GetType().Equals(typeof(int[])))
             {
