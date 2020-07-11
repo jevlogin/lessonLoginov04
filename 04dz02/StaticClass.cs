@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace _04dz02
 {
@@ -19,6 +16,32 @@ namespace _04dz02
                 }
             }
             return count;
+        }
+        public static dynamic GetArray(string fileName)
+        {
+            int[] a;
+            if (File.Exists(fileName))
+            {
+                string[] ss = File.ReadAllLines(fileName);
+                a = new int[ss.Length];
+                for (int i = 0; i < ss.Length; i++)
+                {
+                    a[i] = int.Parse(ss[i]);
+                }
+                return a;
+            }
+            else
+            {
+               return "Error load file";
+            }
+        }
+
+        public static void Print(int[] array2)
+        {
+            foreach (var el in array2)
+            {
+                Console.Write($"{el,4}");
+            }
         }
     }
 

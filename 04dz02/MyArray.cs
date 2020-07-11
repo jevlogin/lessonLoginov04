@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _04dz01
+namespace _04dz02
 {
     class MyArray
     {
